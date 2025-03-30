@@ -14,7 +14,9 @@ import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
 import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
+import TextAlign from "@tiptap/extension-text-align";
 import { Color } from "@tiptap/extension-color";
+import { FontSizeExtension } from "@/extensions/font-size";
 import { useEditor, EditorContent } from "@tiptap/react";
 
 import { useEditorStore } from "@/app/store/use-editor-store";
@@ -79,6 +81,10 @@ export const Editor = () => {
         autolink: true,
         defaultProtocol: "https",
       }),
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
+      FontSizeExtension,
     ],
     content: `
         <table>

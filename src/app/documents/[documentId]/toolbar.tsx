@@ -23,6 +23,9 @@ import { TextColorButton } from "./text-color-button";
 import { HighlightColorButton } from "./highlight-color-button";
 import { LinkButton } from "./link-button";
 import { ImageButton } from "./image-button";
+import { AlignButton } from "./align-button";
+import { ListButton } from "./list-button";
+import { FontSizeButton } from "./fontsize-button";
 
 export const Toolbar = () => {
   const { editor } = useEditorStore();
@@ -116,22 +119,25 @@ export const Toolbar = () => {
       <HeadingLevelButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {/* TODO: Font Size */}
+      <FontSizeButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {sections[1].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
       {/* TODO: Text color */}
-      <TextColorButton/>
+      <TextColorButton />
       {/* TODO: Highlight color */}
-      <HighlightColorButton/>
+      <HighlightColorButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {/* TODO: Link */}
       <LinkButton />
       {/* TODO: Image */}
       <ImageButton />
       {/* TODO: Align */}
+      <AlignButton />
       {/* TODO: Line height */}
       {/* TODO: List */}
+      <ListButton />
       {sections[2].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
