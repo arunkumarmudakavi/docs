@@ -17,6 +17,7 @@ import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
 import { Color } from "@tiptap/extension-color";
 import { FontSizeExtension } from "@/extensions/font-size";
+import { LineHeightExtension } from "@/extensions/line-height";
 import { useEditor, EditorContent } from "@tiptap/react";
 
 import { useEditorStore } from "@/app/store/use-editor-store";
@@ -85,6 +86,7 @@ export const Editor = () => {
         types: ["heading", "paragraph"],
       }),
       FontSizeExtension,
+      LineHeightExtension,
     ],
     content: `
         <table>
