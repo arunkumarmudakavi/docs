@@ -4,6 +4,7 @@ import { DocumentInput } from "./document-input";
 import { MenuBar } from "./menubar";
 
 export const Navbar = () => {
+
   return (
     <nav className="flex items-center justify-between">
       <div className="flex gap-2 items-center">
