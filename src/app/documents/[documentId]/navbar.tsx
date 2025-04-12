@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { DocumentInput } from "./document-input";
 import { MenuBar } from "./menubar";
+import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 
 export const Navbar = () => {
-
   return (
     <nav className="flex items-center justify-between">
       <div className="flex gap-2 items-center">
@@ -15,8 +15,17 @@ export const Navbar = () => {
           {/* Document Input */}
           <DocumentInput />
           {/* Menubar */}
-          <MenuBar/>
+          <MenuBar />
         </div>
+      </div>
+      <div className="flex gap-3 items-center pl-6">
+        <OrganizationSwitcher
+          afterCreateOrganizationUrl="/"
+          afterLeaveOrganizationUrl="/"
+          afterSelectOrganizationUrl="/"
+          afterSelectPersonalUrl="/"
+        />
+        <UserButton />
       </div>
     </nav>
   );
