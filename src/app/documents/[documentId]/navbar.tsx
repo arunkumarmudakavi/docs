@@ -4,6 +4,7 @@ import { DocumentInput } from "./document-input";
 import { MenuBar } from "./menubar";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { Avatars } from "./avatars";
+import { Inbox } from "./inbox";
 
 export const Navbar = () => {
   return (
@@ -20,7 +21,8 @@ export const Navbar = () => {
         </div>
       </div>
       <div className="flex gap-3 items-center pl-6">
-        <Avatars/>
+        <Avatars />
+        <Inbox />
         <OrganizationSwitcher
           afterCreateOrganizationUrl="/"
           afterLeaveOrganizationUrl="/"
